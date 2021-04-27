@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import * as S from './style';
-import iconReturn from '../../Images/icon-arrow.svg';
-import iconHome from '../../Images/icon-home.svg';
+import ScreenBoard from '../../Components/ScreenPasswords';
+import Icons from '../../Components/Icons';
 
 const FollowQueue = () => {
   const location = useLocation();
@@ -11,13 +11,12 @@ const FollowQueue = () => {
   const [preferentialPassword, setPreferentialPassword] = useState(0);
   useEffect(() => {
     if (localStorage.normal && localStorage.preferential) {
-      const storageNormal = localStorage.normal;
+      const storageNormal = Number(localStorage.normal);
       setNormalPassword(storageNormal);
-      const storagePreferential = localStorage.preferential;
+      const storagePreferential = Number(localStorage.preferential);
       return setPreferentialPassword(storagePreferential);
     }
-    setNormalPassword(0);
-    return setPreferentialPassword(0);
+    return 'done';
   }, []);
   return (
     <S.Container>
@@ -28,13 +27,13 @@ const FollowQueue = () => {
           </S.Title>
           <S.BoxQueue>
             <S.SubTitle>
-              Sua Fila:
+              Sua Fila
             </S.SubTitle>
             <S.BoxType>
               Normal
             </S.BoxType>
             <S.SubTitle>
-              Sua senha:
+              Sua senha
             </S.SubTitle>
             <S.BoxPassword>
               N000{normalPassword}
@@ -48,7 +47,7 @@ const FollowQueue = () => {
         </S.Title>
         <S.BoxQueue>
           <S.SubTitle>
-            Sua Fila:
+            Sua Fila
           </S.SubTitle>
           <S.BoxType>
             Preferencial
@@ -56,7 +55,7 @@ const FollowQueue = () => {
         </S.BoxQueue>
         <S.BoxQueue>
           <S.SubTitle>
-            Sua senha:
+            Sua senha
           </S.SubTitle>
           <S.BoxPassword>
             P000{preferentialPassword}
@@ -64,18 +63,8 @@ const FollowQueue = () => {
         </S.BoxQueue>
       </>
       }
-      <S.BoxNav>
-        <S.icon>
-          <Link to="/queue" >
-            <img src={ iconReturn } alt="icon return" />
-          </Link>
-        </S.icon>
-        <S.icon>
-          <Link to="/" >
-            <img src={ iconHome } alt="icon home" />
-          </Link>
-        </S.icon>
-      </S.BoxNav>
+      <ScreenBoard />
+      <Icons />
     </S.Container>
   )
 };

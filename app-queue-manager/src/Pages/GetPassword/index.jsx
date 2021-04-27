@@ -12,12 +12,11 @@ const GetPassword = () => {
         seja bem-vindo ao gerenciador de fila!
       </S.Title>
       <S.SubTitle>
-        Você é:
+        Você é
       </S.SubTitle>
       <S.ContainerButtons>
         <S.ButtonStyle>
           <Button
-            color= "#4361ee"
             onClick={ () => history.push('/queue') }
           >
             Usuário
@@ -25,7 +24,6 @@ const GetPassword = () => {
         </S.ButtonStyle>
         <S.ButtonStyle>
           <Button
-            color= "#4361ee"
             onClick={ () => history.push('/manager') }
           >
             Gerente

@@ -13,28 +13,35 @@ export const Title = styled.h1`
   margin-bottom: 70px;
   font-size: 40pt;
   color: #1dab45;
-  border: 5px solid #1dab45;
   padding: 7px
 `;
 export const SubTitle = styled.h1`
   margin: 20px 0;
   font-size: 30pt;
-  color: #6665DD;
-  padding: 7px
+  color: #333533;
+  padding: 8px
 `;
 export const BoxType = styled.div`
+  display: flex;
+  justify-content: center;
   margin: 20px 0;
+  width: 45%;
   font-size: 30pt;
-  color: #5a4fcf;
-  padding: 7px;
-  background-color: #34e065;
+  border-radius: 8px;
+  color: #333533;
+  padding: 8px;
+  border: 5px solid #1dab45;
 `;
 export const BoxPassword = styled.div`
+  display: flex;
+  justify-content: center;
   margin: 20px 0;
   font-size: 30pt;
-  color: #5a4fcf;
-  padding: 7px;
-  background-color: #34e065;
+  width: 45%;
+  border-radius: 8px;
+  color: #333533;
+  padding: 8px;
+  border: 5px solid #1dab45;
 `;
 export const BoxNav = styled.div`
   display: flex;

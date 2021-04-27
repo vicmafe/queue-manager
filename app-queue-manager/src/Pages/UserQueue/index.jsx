@@ -32,25 +32,33 @@ const Queue = () => {
     return setPreferentialPassword(0);
   }, []);
   return (
-    <>
+    <S.Container>
       <S.Title>
-      Escolha sua fila:
+      Escolha sua fila
       </S.Title>
-      <Button
-        onClick={ () => updatePassword('normal') }
-      >
-        Normal
-      </Button>
-      <Button
-        onClick={ () => updatePassword('preferential') }
-      >
-        Preferencial
-      </Button>
-      <Link to="/" >
-        <image src={ iconReturn } alt="icon return" />
-        Voltar
-      </Link>
-    </>
+      <S.ContainerButtons>
+        <S.ButtonStyle>
+          <Button
+            onClick={ () => updatePassword('normal') }
+          >
+            Normal
+          </Button>
+        </S.ButtonStyle>
+        <S.ButtonStyle>
+          <Button
+            onClick={ () => updatePassword('preferential') }
+          >
+            Preferencial
+          </Button>
+        </S.ButtonStyle>
+      </S.ContainerButtons>
+      <S.Icon>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <img src={ iconReturn } alt="icon return" />
+          Voltar
+        </Link>
+      </S.Icon>
+    </S.Container>
   )
 };
 
