@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GetPassword from './Pages/GetPassword';
-import Queue from './Pages/ManagerQueue';
+import Queue from './Pages/UserQueue';
 import Manager from './Pages/ManagerQueue';
 
 function App() {

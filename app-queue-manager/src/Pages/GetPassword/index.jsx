@@ -1,29 +1,38 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '../../Components/Button';
-import ButtonStyle from './style';
+import * as S from './style';
 
 const GetPassword = () => {
   const history = useHistory();
   return (
-    <div>
-      <h1>Olá, seja bem-vindo!</h1>
-      <h3>Você é:</h3>
-      <ButtonStyle>
-        <Button
-          onClick={ () => history.push('/queue') }
-        >
-          Usuário
-        </Button>
-      </ButtonStyle>
-      <ButtonStyle>
-        <Button
-          onClick={ () => history.push('/manager') }
-        >
-          Gerente
-        </Button>
-      </ButtonStyle>
-    </div>
+    <S.Container>
+      <S.Title>
+        Olá,
+        seja bem-vindo ao gerenciador de fila!
+      </S.Title>
+      <S.SubTitle>
+        Você é:
+      </S.SubTitle>
+      <S.ContainerButtons>
+        <S.ButtonStyle>
+          <Button
+            color= "#4361ee"
+            onClick={ () => history.push('/queue') }
+          >
+            Usuário
+          </Button>
+        </S.ButtonStyle>
+        <S.ButtonStyle>
+          <Button
+            color= "#4361ee"
+            onClick={ () => history.push('/manager') }
+          >
+            Gerente
+          </Button>
+        </S.ButtonStyle>
+      </S.ContainerButtons>
+    </S.Container>
   );
 };
 
