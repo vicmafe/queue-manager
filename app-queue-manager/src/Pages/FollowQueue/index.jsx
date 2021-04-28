@@ -63,7 +63,9 @@ const FollowQueue = () => {
         </S.BoxQueue>
       </>
       }
-      <ScreenBoard />
+      <S.screen>
+        <ScreenBoard />
+      </S.screen>
       <Icons />
     </S.Container>
   )

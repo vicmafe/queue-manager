@@ -6,35 +6,95 @@ import Icon from '../../Components/Icons'
 
 const Manager = () => {
   const [status, setStatus] = useState('');
-  const [normalPassword, setNormalPassword] = useState(0);
-  const [preferentialPassword, setPreferentialPassword] = useState(0);
-  const [normalAtended, setNormalAtended] = useState(0);
-  const [preferentialAtended, setPreferentialAtended] = useState(0);
+  const [normalPassword, setNormalPassword] = useState(Number);
+  const [preferentialPassword, setPreferentialPassword] = useState(Number);
+  const [normalAtended, setNormalAtended] = useState(Number);
+  const [preferentialAtended, setPreferentialAtended] = useState(Number);
+  const [screenAtending, setScreenAtended] = useState();
+  const message = 'Oba! sem fila de atendimento.';
   const attendig = () => {
-    if (preferentialPassword >= 1) {
-      const updateQueue = preferentialPassword - 1;
+    if (preferentialPassword && preferentialPassword > preferentialAtended) {
       const updatePreferentialAtended = preferentialAtended + 1;
-      setPreferentialAtended(updatePreferentialAtended)
-      localStorage.setItem('preferential', updateQueue);
-      return localStorage.setItem('preferentialAtended', preferentialAtended);
+      setPreferentialAtended(updatePreferentialAtended);
+      const screen = atendingView('Preferencial', updatePreferentialAtended );
+      return setScreenAtended(screen)
     }
-    if (normalPassword >= 1) {
-      const updateQueue = normalPassword - 1;
+    if (normalPassword && normalPassword > normalAtended) {
       const updateNormalAtended = normalAtended + 1;
       setNormalAtended(updateNormalAtended);
-      localStorage.setItem('normal', updateQueue);
-      return localStorage.setItem('normalAtended', normalAtended);
+      const screen = atendingView('Normal', updateNormalAtended)
+      return setScreenAtended(screen)
     }
-    return setStatus('Sem fila de atendimento!')
+    return setStatus(message);
   };
-  useEffect(() => {
+  
+  const resetQueue = () => {
+    setNormalPassword(0);
+    setPreferentialPassword(0);
+    setNormalAtended(0);
+    setPreferentialAtended(0);
+    localStorage.clear();
+    return setStatus(message);
+  };
+
+  const updateQueue = () => {
+    localStorage.setItem('normal', normalPassword)
+    localStorage.setItem('normalAtended', normalAtended);
+    localStorage.setItem('preferential', preferentialPassword);
+    localStorage.setItem('preferentialAtended', preferentialAtended);
+  };
+
+  // const verifyQueueAtended = () => {
+  //   if (normalPassword === normalAtended && preferentialPassword === preferentialAtended) return setStatus(message);
+  // };
+
+  const verifyStorage = () => {
     if (localStorage.normal && localStorage.preferential) {
-      const storageNormal = Number(localStorage.normal);
+      const storageNormal = Number(localStorage.getItem('normal'));
+      const storagePreferential = Number(localStorage.getItem('preferential'));
       setNormalPassword(storageNormal);
-      const storagePreferential = Number(localStorage.preferential);
-      return setPreferentialPassword(storagePreferential);
+      setPreferentialPassword(storagePreferential);
     }
+    if (localStorage.normalAtended && localStorage.preferentialAtended) {
+      const storageNormalAtended = Number(localStorage.getItem('normalAtended'));
+      const storagePreferentialAtended = Number(localStorage.getItem('preferentialAtended'));
+      setNormalAtended(storageNormalAtended);
+      setPreferentialAtended(storagePreferentialAtended);
+    }
+  };
+  
+  const atendingView = (queue, password) => {
+    return (
+      <>
+        <S.SubTitleScreen>
+            Próximo atendimento:
+        </S.SubTitleScreen>
+        <S.BoxQueue>
+          <S.SubTitle>
+              Fila
+          </S.SubTitle>
+          <S.BoxPassword>
+            {queue}
+          </S.BoxPassword>
+          <S.SubTitle>
+              Senha
+          </S.SubTitle>
+          <S.BoxPassword>
+            N000{password}
+          </S.BoxPassword>
+        </S.BoxQueue>
+      </>
+    )
+  }
+  useEffect(() => {
+    verifyStorage();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    updateQueue();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [normalPassword, preferentialPassword, normalAtended, preferentialAtended]);
   return (
     <S.Container>
       { status ? 
@@ -42,15 +102,32 @@ const Manager = () => {
           { status }
         </S.Status>
         :
-        <S.ButtonStyle>
-          <Button
-            onClick={ () => attendig() }
-          >
-            Próximo Atendimento
-          </Button>
-        </S.ButtonStyle>
+        <>
+          <S.Title>
+            Olá Gerente, qual será a sua ação?
+          </S.Title>
+          <S.ContainerButtons>
+            <S.ButtonStyle>
+              <Button
+                onClick={ () => attendig() }
+              >
+                Chamar Próximo
+              </Button>
+            </S.ButtonStyle>
+            <S.ButtonStyle>
+              <Button
+                onClick={ () => resetQueue() }
+              >
+                Zerar Senhas
+              </Button>
+            </S.ButtonStyle>
+          </S.ContainerButtons>
+          { screenAtending }
+          <S.screen>
+            <ScreenBoard />
+          </S.screen>
+        </>
       }
-      <ScreenBoard />
       <Icon />
     </S.Container>
   )

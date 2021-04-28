@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import Button from '../../Components/Button';
 import * as S from './style';
 import iconReturn from '../../Images/icon-arrow.svg';
+import ScreenBoard from '../../Components/ScreenPasswords'
 
 const Queue = () => {
   const [normalPassword, setNormalPassword] = useState(0);
@@ -34,7 +35,7 @@ const Queue = () => {
   return (
     <S.Container>
       <S.Title>
-      Escolha sua fila
+      Escolha sua fila e clique no botão para gerar sua senha
       </S.Title>
       <S.ContainerButtons>
         <S.ButtonStyle>
@@ -52,6 +53,9 @@ const Queue = () => {
           </Button>
         </S.ButtonStyle>
       </S.ContainerButtons>
+      <S.screen>
+        <ScreenBoard />
+      </S.screen>
       <S.Icon>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <img src={ iconReturn } alt="icon return" />

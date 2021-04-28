@@ -1,34 +1,48 @@
 import styled from 'styled-components';
-export const Container = styled.div`
-  margin-top: 50px;
-  border: 3px inset ;
-  width: 40%;
-  height: 50px;
-  background-color: #d7e3fc;
+
+export const BoxContainer = styled.div`
+  margin: 2%;
   display: flex;
-  align-content: flex-start;
   flex-direction: row;
-  align-items: center;
   justify-content: space-around;
-  padding: 0 8px;
+  align-items: flex-start;
+  align-content: center;
+  width: 560px;
+  heigth: 100vh;
+  border: 5px inset;
+  border-radius: 15px;
   background-color: #333533;
+`;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 12px;
 `;
 export const BoxPassword = styled.div`
   margin: 20px 0;
-  font-size: 10pt;
+  font-size: 8pt;
   color: #72ce27;
   padding: 7px;
 `;
 export const Title = styled.h2`
-  margin-top: 70px;
-  margin-bottom: 70px;
+  display: flex;
   font-size: 10pt;
-  color: #fff;
-  padding: 7px
+  color: #72ce27;
 `;
 export const SubTitle = styled.h2`
-  margin: 20px 0;
-  font-size: 10pt;
+  font-size: 8pt;
   color: #adb5bd;
   padding: 7px
+`;
+export const QueueDetails = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background-color: #333533;
+  border: 5px inset;
+  align-items: center;
+  border-radius: 8px;
 `;

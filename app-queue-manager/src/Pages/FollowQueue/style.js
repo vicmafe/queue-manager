@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   margin-top: 70px;
   margin-bottom: 70px;
-  font-size: 40pt;
+  font-size: 60pt;
   color: #1dab45;
   padding: 7px
 `;
@@ -58,4 +58,12 @@ export const BoxQueue = styled.div`
   width: 35%;
   flex-direction: row;
   justify-content: space-between;
+`;
+export const screen = styled.div`
+  height: 100vh;
+  margin-top: 8%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
 `;

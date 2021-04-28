@@ -5,7 +5,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100vh;
 `;
 export const ButtonStyle = styled.div`
@@ -13,22 +12,22 @@ export const ButtonStyle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 45%;
+  width: 40%;
   max-width: 500px;
 `;
 export const Title = styled.h1`
-  margin-top: 0px;
-  font-size: 30pt;
+  margin-top: 1%;
+  font-size: 40pt;
   color: #6665DD;
 `;
 export const SubTitle = styled.h3`
-  margin-top: 90px;
+  margin-top: 3%;
   font-size: 20pt;
   color: #6665DD;
 `;
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 400px;
+  justify-content: space-around;
+  width: 40%;
 `;
