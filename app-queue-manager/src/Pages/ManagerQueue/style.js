@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: #d7e3fc;
   display: flex;
-  align-content: flex-start;
+  align-content: space-between;
   flex-direction: column;
   align-items: center;
   height: 100vh;
@@ -77,4 +77,13 @@ export const ContainerButtons = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 30%;
+`;
+export const icon = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
+  margin: 25px;
+  align-content: flex-end;
+  filter: invert(41%) sepia(60%) saturate(881%) hue-rotate(207deg) brightness(90%) contrast(92%);
 `;

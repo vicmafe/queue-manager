@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Button from '../../Components/Button';
 import * as S from './style';
 import ScreenBoard from '../../Components/ScreenPasswords';
-import Icon from '../../Components/Icons'
+import { Link } from 'react-router-dom';
+import iconHome from '../../Images/icon-home.svg';
 
 const Manager = () => {
   const [status, setStatus] = useState('');
@@ -16,14 +17,14 @@ const Manager = () => {
     if (preferentialPassword && preferentialPassword > preferentialAtended) {
       const updatePreferentialAtended = preferentialAtended + 1;
       setPreferentialAtended(updatePreferentialAtended);
-      const screen = atendingView('Preferencial', updatePreferentialAtended );
+      const screen = atendingView('Preferencial', `P000${updatePreferentialAtended}`);
       return setScreenAtended(screen)
     }
     if (normalPassword && normalPassword > normalAtended) {
       const updateNormalAtended = normalAtended + 1;
       setNormalAtended(updateNormalAtended);
-      const screen = atendingView('Normal', updateNormalAtended)
-      return setScreenAtended(screen)
+      const screen = atendingView('Normal', `N000${updateNormalAtended}`);
+      return setScreenAtended(screen);
     }
     return setStatus(message);
   };
@@ -38,15 +39,11 @@ const Manager = () => {
   };
 
   const updateQueue = () => {
-    localStorage.setItem('normal', normalPassword)
+    localStorage.setItem('normal', normalPassword);
     localStorage.setItem('normalAtended', normalAtended);
     localStorage.setItem('preferential', preferentialPassword);
     localStorage.setItem('preferentialAtended', preferentialAtended);
   };
-
-  // const verifyQueueAtended = () => {
-  //   if (normalPassword === normalAtended && preferentialPassword === preferentialAtended) return setStatus(message);
-  // };
 
   const verifyStorage = () => {
     if (localStorage.normal && localStorage.preferential) {
@@ -80,7 +77,7 @@ const Manager = () => {
               Senha
           </S.SubTitle>
           <S.BoxPassword>
-            N000{password}
+            {password}
           </S.BoxPassword>
         </S.BoxQueue>
       </>
@@ -128,7 +125,12 @@ const Manager = () => {
           </S.screen>
         </>
       }
-      <Icon />
+      <S.icon>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <img src={ iconHome } alt="icon home" />
+          Início
+        </Link>
+      </S.icon>
     </S.Container>
   )
 };
