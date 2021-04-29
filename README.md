@@ -3,7 +3,8 @@
 
 ## Descrição do Projeto
 
-<p>Aplicação web para gerenciar filas de acordo com os requisitos funcionais descritos abaixo.</p>
+<p>Aplicação web de controle de senhas para atendimento bancário. O sistema será utilizado
+por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos funcionais descritos abaixo.</p>
 
 
 ## Indice
