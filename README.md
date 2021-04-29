@@ -1,20 +1,21 @@
 # Projeto App-Queue
 
+
 ## Descrição do Projeto
 
 <p>Aplicação web para gerenciar filas de acordo com os requisitos funcionais descritos abaixo.</p>
 
 
 ## Indice
-<p>
+
  - <a href="##requesitos">Requisitos funcionais</a><br>
  - <a href="##rodar">Como rodar</a><br>
  - <a href="##demo">Demonstração da aplicação funcionando</a><br>
  - <a href="##autor">Sobre o autor</a><br>
-</p>
 
 
 ## Requisitos funcionais
+
   - [x] Deve ser possível gerar novas senhas, que podem ser de dois tipos: NORMAL e PREFERENCIAL, com os formatos “N####” e “P####” respectivamente, onde “#” é um dígito;
   - [x] Deve ser possível acompanhar a chamada das senhas;
   - [x] O acesso ao acompanhamento e a geração de novas senhas deve ser público;
@@ -25,7 +26,9 @@
   - [x] Não há necessidade de login e senha para o perfil de GERENTE;
   - [x] O sistema deve garantir que a sequência de senhas não seja perdida caso o servidor precise ser reiniciado.
 
+
 ## Como rodar
+
 <p>
   1 - Abra um terminal;<br>
   2 - Clone o repositorio;<br>
@@ -34,9 +37,11 @@
   5 - Assim que finalizar a instalação digite: npm start;<br>
 </p>
 
+
 ## Demonstração da aplicação funcionando
 
   <img alt="gif app" title="#gifApp" src="./app-queue-manager-work.gif" width="800px;" />
+
 
 ## Sobre o autor
 
