@@ -58,11 +58,10 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
 <a href="https://www.linkedin.com/in/victor-mateus-ferreira/">
  <img style={border-radius: 3px} src="./Avatar.jpeg" width="200px;" alt=""/>
  <br>
- <br>
- <sub><b>Vctor Mateus</b></sub>🚀</a><br>
+ <sub><b>Vctor Mateus </b></sub>🚀</a><br>
 <br>
 
 <p>
-Feito com ❤️ por Victor Mateus<br>
-Entre em contato! 👋🏽
+Feito com ❤️ por Victor Mateus 👋🏽<br>
+Entre em contato!
 </p>
