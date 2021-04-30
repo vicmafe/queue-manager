@@ -39,10 +39,9 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
   <br>
   1 - Abra um terminal;<br>
   2 - Clone o repositorio;<br>
-  3 - Navegue até a pasta app-queue-manager dentro do repositorio clonado;<br>
-  4 - Digite na pasta app-queue-manager: npm install;<br>
-  5 - Assim que finalizar a instalação digite: npm start;<br>
-  6 - Após alguns minutos uma janela do seu browser abrirá automaticamento com a aplicação rodando;<br>
+  3 - Digite na pasta raiz do projeto: npm install;<br>
+  4 - Assim que finalizar a instalação digite: npm start;<br>
+  5 - Após alguns minutos uma janela do seu browser abrirá automaticamente já com a aplicação rodando;<br>
 </p>
 
 
