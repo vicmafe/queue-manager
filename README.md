@@ -31,11 +31,18 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
 ## Como rodar
 
 <p>
+  Para interagir com a aplicação basta acessar <a href="http://https://gerenciador-filas.herokuapp.com/">aqui</a>
+</p>
+
+<p>
+  Para rodar localmente, siga os passos:<br>
+  <br>
   1 - Abra um terminal;<br>
   2 - Clone o repositorio;<br>
   3 - Navegue até a pasta app-queue-manager dentro do repositorio clonado;<br>
   4 - Digite na pasta app-queue-manager: npm install;<br>
   5 - Assim que finalizar a instalação digite: npm start;<br>
+  6 - Após alguns minutos uma janela do seu browser abrirá automaticamento com a aplicação rodando;<br>
 </p>
 
 
@@ -49,7 +56,7 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
 <a href="https://www.linkedin.com/in/victor-mateus-ferreira/">
  <img style={border-radius: 50%} src="./Avatar.jpeg" width="200px;" alt=""/>
  <br>
- <sub><b>Vctor Mateus</b></sub></a>🚀</a><br>
+ <sub><b>Vctor Mateus</b></sub>🚀</a><br>
 
 <p>
 Feito com ❤️ por Victor Mateus 👋🏽 Entre em contato!
