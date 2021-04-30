@@ -9,10 +9,11 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
 
 ## Indice
 
- - <a href="##requesitos">Requisitos funcionais</a><br>
- - <a href="##rodar">Como rodar</a><br>
- - <a href="##demo">Demonstração da aplicação funcionando</a><br>
- - <a href="##autor">Sobre o autor</a><br>
+ - <a href="##Requisitos funcionais">Requisitos funcionais</a><br>
+ - <a href="##Como rodar">Como rodar</a><br>
+ - <a href="##Demonstração da aplicação funcionando">Demonstração da aplicação funcionando</a><br>
+ - <a href="##Sobre o autor">Sobre o autor</a><br>
+ <br>
 
 
 ## Requisitos funcionais
@@ -26,6 +27,7 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
   - [x] Somente o GERENTE será capaz de reiniciar a contagem de senhas;
   - [x] Não há necessidade de login e senha para o perfil de GERENTE;
   - [x] O sistema deve garantir que a sequência de senhas não seja perdida caso o servidor precise ser reiniciado.
+  <br>
 
 
 ## Como rodar
@@ -36,27 +38,31 @@ por dois perfis de usuários: GERENTE e CLIENTE, de acordo com os requisitos fun
 
 <p>
   Para rodar localmente, siga os passos:<br>
-  <br>
   1 - Abra um terminal;<br>
   2 - Clone o repositorio;<br>
-  3 - Digite na pasta raiz do projeto: npm install;<br>
-  4 - Assim que finalizar a instalação digite: npm start;<br>
-  5 - Após alguns minutos uma janela do seu browser abrirá automaticamente já com a aplicação rodando;<br>
+  3 - Instale as dependencias na pasta raiz do projeto digitando: npm install;<br>
+  4 - Assim que finalizar a instalação, rode a aplicação digitando: npm start;<br>
+  5 - Após alguns instantes uma aba do seu browser abrirá com a aplicação pronta para o uso;<br>
 </p>
+<br>
 
 
 ## Demonstração da aplicação funcionando
 
   <img alt="gif app" title="#gifApp" src="./app-queue-manager-work.gif" width="800px;" />
+  <br>
 
 
 ## Sobre o autor
 
 <a href="https://www.linkedin.com/in/victor-mateus-ferreira/">
- <img style={border-radius: 50%} src="./Avatar.jpeg" width="200px;" alt=""/>
+ <img style={border-radius: 3px} src="./Avatar.jpeg" width="200px;" alt=""/>
+ <br>
  <br>
  <sub><b>Vctor Mateus</b></sub>🚀</a><br>
+<br>
 
 <p>
-Feito com ❤️ por Victor Mateus 👋🏽 Entre em contato!
+Feito com ❤️ por Victor Mateus<br>
+Entre em contato! 👋🏽
 </p>
